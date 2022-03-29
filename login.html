@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Baloo Chettan 2' rel='stylesheet'>
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: aqua;
+        }
+        #conatiner{
+
+            background-color: white;
+            width: 550px;
+            margin: auto;
+            padding:20px 20px 20px 20px;
+
+        }
+
+        h2{
+            font-size: 34px;
+            text-align: center;
+            font-family: 'Baloo Chettan 2';
+            font-weight: 550;
+            margin-bottom: 15px;
+        }
+
+         h2+p{
+            font-size: 11px;
+            color:  #777;
+            text-align: center; 
+      } 
+
+        #box1{
+            width:50%;
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            
+        }
+
+        #fbBtn{
+            font-size: 14px;
+            padding: 10px;
+            border: 1px solid #d2d2d2;
+            margin: 5px;
+            color: #3b5998 ;
+
+        }
+
+
+        #gglBtn{
+
+            color: #d34836 !important;
+            font-size: 14px;
+            padding: 10px;
+            border: 1px solid #d2d2d2;
+            margin: 5px;
+
+
+        }
+
+        #box1+p{
+            color: #777;
+            text-align: center;
+            font-size: 11px;
+            margin-bottom: 20px;
+        }
+
+        input{
+            width: 100%;
+            height: 36px;
+            margin-bottom: 20px;
+           
+        }
+
+        #login{
+            color: #fff;
+            background-color: #ffd51e;
+            border-color: #ffd51e;
+            border: 1px solid transparent;
+
+        }
+
+        #passOption{
+            text-align: center;
+            font-size: 12px ;
+            margin-bottom: 30px;
+        }
+
+        #yellowSty{
+            color:  #ffd51e;
+            cursor: pointer;
+        }
+        input:focus { 
+        outline: none !important;
+        border-color: #719ECE;
+        box-shadow: 0 0 10px #719ECE;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="conatiner">
+
+    <h2>Login to TOY MARCHE</h2>
+
+    <p> EASILY USING</p>
+
+    <div id="box1">
+
+        <div id="fbBtn"> 
+            Facebook
+        </div>
+
+        <div id="gglBtn"> 
+            Google
+        </div>
+    </div>
+
+    <p>- OR USING EMAIL -</p>
+
+    <form>
+
+        <input type="text" placeholder="Email" id="email">
+        <input type="text" placeholder="Password" id="pass">
+        <input type="submit" value="Login" id="login">
+    </form>
+
+    <div id="passOption">
+
+        <p id="yellowSty">Forgot Password?</p>
+        <P>New here? <span id="yellowSty">Create account</span></P>
+
+
+
+    </div>
+
+
+
+        
+    </div>
+    
+</body>
+</html>
