@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Marche: Online Toys & games Store in India| Buy Toys for kids</title>
+    <link rel="icon" type="image/x-icon" href="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/5f8d4b8aecff0cf1fd324ab5/webp/logo_logo-240x240.png">
+    <!-- <link rel="stylesheet" href="toymarche_home.css"> -->
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous" ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Poppins:wght@400;500&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <body background="https://cdn.storehippo.com/s/5f447e14285691dcc9bfcdf2/ms.files/body_bg.png">
+
+    
+<style>
+     body{
+         /* background-image:url("https://cdn.storehippo.com/s/5f447e14285691dcc9bfcdf2/ms.files/body_bg.png"); */
+         font-family: "Baloo Chettan 2",sans-serif;
+     }                                               
+     
+                                           /* NAVBAR CSS starts here */
+    .navbox{
+    height:40%;
+    width:100%;
+    /* border:1px solid red; */
+    
+}
+.navbox>div:nth-child(1){
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    text-align: center;
+    /* border:1px solid black; */
+}
+.navbox>div:nth-child(1)>div{
+    /* border:1px solid black; */
+    width:15%;
+    text-align:center;
+    display:flex;
+    justify-content: space-around;
+}
+.navbox>div:nth-child(1)>div>:hover{
+    color:blue;
+}
+
+.navbox2{
+    height:50px;
+    width:100%;
+    background-color: gold;
+    display:flex;
+    justify-content:flex-start;
+    padding-left:12%;
+    gap:20px;
+    
+
+    
+}
+
+.shopcontent,.morecontent{
+  display:none;
+  background-color: #f9f9f9;
+  width:auto;
+  height:auto;
+  padding-left: 10px ;
+  padding-right: 20px;
+  z-index: 1;
+  position:absolute;
+  line-height:5px;
+}
+/* .shopcontent>p{
+    width:80%;
+    height:80%;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    line-height: 5px;
+    
+} */
+.shopcontent>p:hover,.morecontent>p:hover{
+    color:blue;
+}
+
+.shop-dropdown:hover  .shopcontent{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+}
+.more-dropdown:hover .morecontent{
+    display:grid;
+  grid-template-columns:auto;
+}
+
+#cartcount,#favcount{
+    display:inline;
+    margin-left:5px;
+    width:20px;
+    color:white;
+    border-radius:10px;
+    padding:0px 4px 0px 4px;
+    background-color: #999999;
+}
+.navbox>div>img{
+    width:15%;
+    height:80%;
+}
+select{
+   border:none;
+   background-color:transparent;
+   font-size: medium;
+   font-weight: 400;
+   width:60px;
+}
+
+
+select~div{
+    display:flex;
+    align-items: center;
+}
+
+                                                /* NAVBAR CSS ends here */
+#sliderdiv{
+    width:100%;
+    height:auto;
+    /* border:1px solid blue; */
+}
+
+#sliderdiv~div{
+    width:80%;
+    height:auto;
+    /* border:1px solid black; */
+    margin:auto;
+}
+#sliderdiv>img{
+    width:100%;
+    height:100%;
+}
+#grid{
+    /* border:1px solid red; */
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    
+}
+#sliderdiv~div img{
+    width:100%;
+    
+}
+</style>
+</head>
+<body>
+                                                         <!-- NAVBAR STarts here -->
+    <div class="navbox">
+        <div>
+            <img src="https://cdn1.storehippo.com/s/5f447e14285691dcc9bfcdf2/5fa00a8f29cc626bc128f080/webp/logo-for-website.png" />
+            <select>
+            <option value="Shop">Shop</option></b>
+            <option value="Shop">Shop</option>
+            <option value="Shop">Sell</option>
+            </select>
+             <div >
+                <div><i class="fa-solid fa-cart-shopping fa-2x"></i><div id="cartcount">0</div></div>
+                <div><i class="fa-solid fa-heart fa-2x"></i><div id="favcount">0</div></div>
+                <div><span onclick="gotow()">Login |</span><span>Signup</span></div>  
+            </div>
+        </div>
+    </div>   
+    <div class="navbox2">
+                 <p onclick="gotow()">Home</p>
+                <div class="shop-dropdown">
+                     <p onclick="gotow()">Shop<span> </span><i class="fa-solid fa-angle-down"></i></p>
+                     <div class="shopcontent">
+                        <p onclick="gotow()"><b>Learn with fun</b></p>
+                        <p onclick="gotow()">Educational Toys & games</p>
+                        <p onclick="gotow()">Art& Craft</p>
+                        <p onclick="gotow()">Building Blocks</p>
+                        <p onclick="gotow()">Puzzles &board games</p>
+                        <p onclick="gotow()"><b>Collectibles</b></p>
+                        <p onclick="gotow()">Characters</p>
+                        <p onclick="gotow()">Dolls & Doll houses</p>
+                        <p onclick="gotow()">Cars</p>
+                        <p onclick="gotow()">Action Figures</p>
+                        <p onclick="gotow()"><b>Active play</b></p>
+                        <p onclick="gotow()">Ride on toys</p>
+                        <p onclick="gotow()">Outdoor Playsets</p>
+                        <p onclick="gotow()"><b>Soft Plays</b></p>
+                        <p onclick="gotow()">Soft Toys</p>
+                        <p onclick="gotow()"><b>Baby &Pre-School</b></p>
+                        <p onclick="gotow()"><b>Pretend Pla</b>y</p>
+                    </div>
+                </div>
+                <div class=" more-dropdown">
+                    <p>More<span> </span><i class="fa-solid fa-angle-down"></i></p>
+                        <div class="morecontent">
+                           <p onclick="gotow()">Donate</p>
+                           <p onclick="gotow()">Recycle</p>
+                           <p onclick="gotow()">About us</p>
+                           <p onclick="gotow()">Piggy Bank</p>
+                           <p onclick="gotow()">Contact Us</p>
+                           <p onclick="gotow()">Shopping guide</p>
+                        </div>
+                </div>
+            </div>
+            <!-- <div></div>    FOR SEARCH BAR   -->
+    </div>
+                                                             <!-- NAVBAR Ends Here   -->
+<div id="sliderdiv">
+        <img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/62396e692116d3b59c938057/webp/home-page-banner-collection-7--2048x2048.png">
+</div>
+                                            <!-- DIV for everything below slider section  -->
+
+<div style="background-color:red">
+    <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/622110b6a7f7fcce0e8f10d0/webp/5-2048x2048.png" ></div>
+    <div id="grid">
+            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d0307445cbcf864887b/webp/1-480x480.png"></div>
+            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d1323d459bc947c3a8f/webp/2-480x480.png"></div>
+            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d21c225ddbc66016cdd/webp/5-480x480.png"></div>
+            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d3408cd08bc14aead57/webp/4-480x480.png"></div>
+            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d43c225ddbc66017070/webp/6-480x480.png"></div>
+            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d4f08cd08bc14aeafe5/webp/3-480x480.png"></div>
+    </div>
+    <!-- Akash Add here -->
+</div>
+</body>
+</html>
+<script>
+    function gotow(){
+        window.location.href="hello.html"
+    }
+</script>
