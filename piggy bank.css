@@ -1,0 +1,54 @@
+body{
+    background-image: url(https://cdn.storehippo.com/s/5f447e14285691dcc9bfcdf2/ms.files/body_bg.png);
+    font-family: "Baloo Chettan 2",sans-serif;
+
+}
+#box{
+    width:60%;
+    display: flex;
+    margin:auto;
+    justify-content: center;
+}
+
+h5{
+    margin-bottom: 17px ;
+    font-size :15px; ;
+    text-align: center;
+    
+}
+#container{
+    display: flex;
+    margin:auto;
+    justify-content: center;
+}
+table, th, td{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align:center;
+    width:55%;
+    height:27px;
+}
+#pig:hover{
+    cursor: pointer;
+}
+#span:hover{
+    cursor:pointer;
+    color:blue;
+}
+@media all and (min-width:800px) and (max-width:1415px) { 
+    #box{
+        width:75%;
+    }
+    #container{
+        width:75%;
+    
+    }
+    }
+    @media all and (min-width:80px) and (max-width:799px) { 
+        #box{
+            width:100%;
+        }
+        #container{
+            width:95%;
+        }
+        }
