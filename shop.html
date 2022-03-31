@@ -169,7 +169,7 @@ button{
     margin-left:-20px;
     color:white;
 }
-#tick1{
+#agegrp>input,#tick1{
     
     margin-left: 10px;
     width:15px;
@@ -177,9 +177,9 @@ button{
 }
 .sortdropdown{
     border:1px solid grey;
-    width:25%;
-    height:25%;
-    margin-left: 70%;
+    width:35%;
+    height:20%;
+    margin-left:65%;
     display:flex;
     justify-content: space-around;
     
@@ -309,12 +309,12 @@ button{
                  <button>Go</button>
             </div>
         </div>
-        <div>
+        <div id="agegrp">
             <p>Age Group</p>
-            <input type="checkbox" id="tick1" name="vehicle1" value="Bike">0 to 2 Years<br>
-            <input type="checkbox" id="tick1" name="vehicle1" value="Bike">2 to 5 Years<br>
-            <input type="checkbox" id="tick1" name="vehicle1" value="Bike">5 to 9 Years<br>
-            <input type="checkbox" id="tick1" name="vehicle1" value="Bike">9 Years+<br>
+            <input type="checkbox" id="0to2" name="vehicle1" value="Bike">0 to 2 Years<br>
+            <input type="checkbox" id="2to5" name="vehicle1" value="Bike">2 to 5 Years<br>
+            <input type="checkbox" id="5to9" name="vehicle1" value="Bike">5 to 9 Years<br>
+            <input type="checkbox" id="9years+" name="vehicle1" value="Bike">9 Years+<br>
         </div>
         <div>
             <p>Brand</p>
@@ -388,10 +388,10 @@ button{
                 <p>Sort....</p>
                 <p><i class="fa-solid fa-angle-down"></i></p>
                 <div class="sortcontent">
-                    <p>Price:low to high</p>
-                    <p>Price:High to Low</p>
-                    <p>Names:Ascending Order</p>
-                    <p>Names:Descending Order</p>
+                    <p id="lowtohigh">Price:low to high</p>
+                    <p id="hightolow">Price:High to Low</p>
+                    <p id="ascending">Names:Ascending Order</p>
+                    <p id="descending">Names:Descending Order</p>
                 </div>
             </div>
                 <div><img src="https://cdn.storehippo.com/s/5f447e14285691dcc9bfcdf2/ms.files/uploads/blobid1640854454973.png"></div>
@@ -1434,7 +1434,16 @@ var shoparr=[
         strikedPrice : "₹549",
     },
     ]
-shoparr.map(function(el){
+localStorage.setItem("shopdata",JSON.stringify(shoparr))
+shoparrlocal=JSON.parse(localStorage.getItem("shopdata"))
+displaydata(shoparrlocal)
+document.querySelector("#lowtohigh").addEventListener("click",lowtohigh)
+  document.querySelector("#hightolow").addEventListener("click",hightolow)
+  document.querySelector("#ascending").addEventListener("click",namesasc)
+  document.querySelector("#descending").addEventListener("click",namesdsc)
+function displaydata(shoparrlocal){
+    document.querySelector("#main2b").innerText=""
+    shoparrlocal.map(function(el){
     main=document.querySelector("#main2b")
     div=document.createElement("div")
     div.style.height="350px" 
@@ -1468,5 +1477,41 @@ shoparr.map(function(el){
     main.append(div)
     
 })
+}
+function lowtohigh(){
+    
+    shoparrlocal.sort(function(a,b){
+        return a.price2-b.price2
+      })
+      displaydata(shoparrlocal)
+}
+function hightolow(){
+    
+    shoparrlocal.sort(function(a,b){
+        return b.price2-a.price2
+      })
+      displaydata(shoparrlocal)
+}
+function namesasc(){
+    
+    shoparrlocal.sort(function(a,b){
+        f=a.name.toLowerCase()
+        s=b.name.toLowerCase()
+        if( f>s) return 1
+        if (f<s) return-1
+        return 0
+      })
+      displaydata( shoparrlocal)
+}
+function namesdsc(){
+shoparrlocal.sort(function(a,b){
+        f=a.name.toLowerCase()
+        s=b.name.toLowerCase()
+        if( f>s) return -1
+        if (f<s) return 1
+        return 0
+      })
+      displaydata( shoparrlocal)
+}
 </script>
 
