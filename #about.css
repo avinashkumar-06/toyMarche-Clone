@@ -1,0 +1,33 @@
+
+     
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(https://cdn.storehippo.com/s/5f447e14285691dcc9bfcdf2/ms.files/body_bg.png);
+    background-position: 0 1000px;
+    
+}
+.container{
+           
+           margin: auto;
+         
+           margin-top: 10rem;
+          
+
+           
+}
+
+p{
+   height: 500px;
+   width: 100%;
+   padding: 55px;
+   font-size: 25px;
+   text-align: justify;
+   font-family: Helvetica ;
+}
+img{
+ margin-left: 43%;
