@@ -251,6 +251,10 @@ table, th, td{
         margin: auto;
         padding-right: 5px;
     }
+    a{
+        text-decoration: none;
+        color:black;
+    }
 
 /*HOVER  */
     a>ol:hover{
@@ -260,6 +264,9 @@ table, th, td{
         color: #f3cf2c;
         cursor:pointer
     } 
+    #alog:hover{
+        color:blue;
+    }
 
 /* COPPY WRITE */
     #container-22{
