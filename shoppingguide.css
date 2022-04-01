@@ -82,6 +82,9 @@ body{
     padding:0px 4px 0px 4px;
     background-color: #999999;
 }
+#alog:hover{
+    color:blue;
+}
 .navbox>div>img{
     width:15%;
     height:80%;
@@ -243,6 +246,10 @@ img:hover{
         margin: auto;
         padding-right: 5px;
     }
+    a{
+        text-decoration: none;
+        color:black;
+    }
 
 /*HOVER  */
     a>ol:hover{
@@ -278,4 +285,4 @@ img:hover{
         #container{
             width:95%;
         }
-        }
+    }
