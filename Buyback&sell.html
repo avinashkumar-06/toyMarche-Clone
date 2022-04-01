@@ -95,6 +95,9 @@
     padding:0px 4px 0px 4px;
     background-color: #999999;
 }
+#alog:hover{
+        color:blue;
+    }
 .navbox>div>img{
     width:15%;
     height:80%;
@@ -248,6 +251,12 @@ select~div{
         margin: auto;
         padding-right: 5px;
     }
+    a{
+    text-decoration: none;
+    color:black;
+     }
+     
+
 
 /*HOVER  */
     a>ol:hover{
@@ -286,7 +295,7 @@ select~div{
              <div >
                 <div><i class="fa-solid fa-cart-shopping fa-2x"></i><div id="cartcount">0</div></div>
                 <div><i class="fa-solid fa-heart fa-2x"></i><div id="favcount">0</div></div>
-                <div><span onclick="gotow()">Login |</span><span>Signup</span></div>  
+                <div><a id="alog"href="login.html">Login</a> | <a id="alog" href="signup.html">Signup</a></div>   
             </div>
         </div>
     </div>   
@@ -317,12 +326,13 @@ select~div{
                 <div class=" more-dropdown">
                     <p>More<span> </span><i class="fa-solid fa-angle-down"></i></p>
                         <div class="morecontent">
-                           <p onclick="gotow()">Donate</p>
-                           <p onclick="gotow()">Recycle</p>
-                           <p onclick="gotow()">About us</p>
-                           <p onclick="gotow()">Piggy Bank</p>
-                           <p onclick="gotow()">Contact Us</p>
-                           <p onclick="gotow()">Shopping guide</p>
+                            <a href=""><p>Donate</p></a>
+                            <a href=""><p>Recycle</p></a>
+                            <a href=""><p>About us</p></a>
+                            <a href="piggy bank.html"><p>Piggy Bank</p></a>
+                            <a href="contactus.html"><p>Contact Us</p></a>
+                            <a href="shoppingguide.html"><p>Shopping guide</p></a>
+                            
                         </div>
                 </div>
             </div>
