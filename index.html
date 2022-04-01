@@ -13,194 +13,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Poppins:wght@400;500&family=Roboto+Slab&display=swap" rel="stylesheet">
     <body background="https://cdn.storehippo.com/s/5f447e14285691dcc9bfcdf2/ms.files/body_bg.png">
- <link rel="stylesheet" href="footer.css">
-    
-<style>
-     body{
-         /* background-image:url("https://cdn.storehippo.com/s/5f447e14285691dcc9bfcdf2/ms.files/body_bg.png"); */
-         font-family: "Baloo Chettan 2",sans-serif;
-     }                                               
-     
-                                           /* NAVBAR CSS starts here */
-    .navbox{
-    height:40%;
-    width:100%;
-    /* border:1px solid red; */
-    
-}
-.navbox>div:nth-child(1){
-    height:100%;
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-    text-align: center;
-    /* border:1px solid black; */
-}
-.navbox>div:nth-child(1)>div{
-    /* border:1px solid black; */
-    width:15%;
-    text-align:center;
-    display:flex;
-    justify-content: space-around;
-}
-.navbox>div:nth-child(1)>div>:hover{
-    color:blue;
-}
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="index.css">
 
-.navbox2{
-    height:50px;
-    width:100%;
-    background-color: gold;
-    display:flex;
-    justify-content:flex-start;
-    padding-left:12%;
-    gap:20px;
-    
-
-    
-}
-
-.shopcontent,.morecontent{
-  display:none;
-  background-color: #f9f9f9;
-  width:auto;
-  height:auto;
-  padding-left: 10px ;
-  padding-right: 20px;
-  z-index: 1;
-  position:absolute;
-  line-height:5px;
-}
-/* .shopcontent>p{
-    width:80%;
-    height:80%;
-    margin:auto;
-    display:flex;
-    justify-content: center;
-    line-height: 5px;
-    
-} */
-.shopcontent>p:hover,.morecontent>p:hover{
-    color:blue;
-}
-
-.shop-dropdown:hover  .shopcontent{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-}
-.more-dropdown:hover .morecontent{
-    display:grid;
-  grid-template-columns:auto;
-}
-
-#cartcount,#favcount{
-    display:inline;
-    margin-left:5px;
-    width:20px;
-    color:white;
-    border-radius:10px;
-    padding:0px 4px 0px 4px;
-    background-color: #999999;
-}
-.navbox>div>img{
-    width:15%;
-    height:80%;
-}
-select{
-   border:none;
-   background-color:transparent;
-   font-size: medium;
-   font-weight: 400;
-   width:60px;
-}
-
-
-select~div{
-    display:flex;
-    align-items: center;
-}
-
-                                                /* NAVBAR CSS ends here */
-#sliderdiv{
-    width:100%;
-    height:auto;
-    /* border:1px solid blue; */
-}
-
-#sliderdiv~div{
-    width:80%;
-    height:auto;
-    /* border:1px solid black; */
-    margin:auto;
-}
-#sliderdiv>img{
-    width:100%;
-    height:100%;
-}
-#grid{
-    /* border:1px solid red; */
-    width:100%;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto;
-    
-}
-#sliderdiv~div img{
-    width:100%;
-    
-}
-</style>
 </head>
 <body>
                                                          <!-- NAVBAR STarts here -->
     <div class="navbox">
         <div>
             <img src="https://cdn1.storehippo.com/s/5f447e14285691dcc9bfcdf2/5fa00a8f29cc626bc128f080/webp/logo-for-website.png" />
-            <select>
+            <select onchange="gotoshop2()">
             <option value="Shop">Shop</option></b>
-            <option value="Shop">Shop</option>
-            <option value="Shop">Sell</option>
+           <option id="selectshop" value="Shop">Shop</option>
+            <option value="Sell">Sell</option>
             </select>
              <div >
-                <div><i class="fa-solid fa-cart-shopping fa-2x"></i><div id="cartcount">0</div></div>
-                <div><i class="fa-solid fa-heart fa-2x"></i><div id="favcount">0</div></div>
-                <div><span onclick="gotow()">Login |</span><span>Signup</span></div>  
+                <div><i class="fa-solid fa-cart-shopping fa-2x"></i><div id="cartcount" class="cartcoutup"></div></div>
+                <div><i class="fa-solid fa-heart fa-2x"></i><div id="favcount"class="wishcoup"></div></div>
+               
+                <div><a id="alog"href="login.html">Login</a> | <a id="alog" href="signup.html">Signup</a></div>  
             </div>
         </div>
     </div>   
     <div class="navbox2">
-                 <p onclick="gotow()">Home</p>
+                <div> <p onclick="gotohome()">Home</p></div>
                 <div class="shop-dropdown">
-                     <p onclick="gotow()">Shop<span> </span><i class="fa-solid fa-angle-down"></i></p>
+                     <p onclick="gotoshop()">Shop<span> </span><i class="fa-solid fa-angle-down"></i></p>
                      <div class="shopcontent">
-                        <p onclick="gotow()"><b>Learn with fun</b></p>
-                        <p onclick="gotow()">Educational Toys & games</p>
-                        <p onclick="gotow()">Art& Craft</p>
-                        <p onclick="gotow()">Building Blocks</p>
-                        <p onclick="gotow()">Puzzles &board games</p>
-                        <p onclick="gotow()"><b>Collectibles</b></p>
-                        <p onclick="gotow()">Characters</p>
-                        <p onclick="gotow()">Dolls & Doll houses</p>
-                        <p onclick="gotow()">Cars</p>
-                        <p onclick="gotow()">Action Figures</p>
-                        <p onclick="gotow()"><b>Active play</b></p>
-                        <p onclick="gotow()">Ride on toys</p>
-                        <p onclick="gotow()">Outdoor Playsets</p>
-                        <p onclick="gotow()"><b>Soft Plays</b></p>
-                        <p onclick="gotow()">Soft Toys</p>
-                        <p onclick="gotow()"><b>Baby &Pre-School</b></p>
-                        <p onclick="gotow()"><b>Pretend Pla</b>y</p>
+                        <p onclick="gotoshop()"><b>Learn with fun</b></p>
+                        <p onclick="gotoshop()">Educational Toys & games</p>
+                        <p onclick="gotoshop()">Art& Craft</p>
+                        <p onclick="gotoshop()">Building Blocks</p>
+                        <p onclick="gotoshop()">Puzzles &board games</p>
+                        <p onclick="gotoshop()"><b>Collectibles</b></p>
+                        <p onclick="gotoshop()">Characters</p>
+                        <p onclick="gotoshop()">Dolls & Doll houses</p>
+                        <p onclick="gotoshop()">Cars</p>
+                        <p onclick="gotoshop()">Action Figures</p>
+                        <p onclick="gotoshop()"><b>Active play</b></p>
+                        <p onclick="gotoshop()">Ride on toys</p>
+                        <p onclick="gotoshop()">Outdoor Playsets</p>
+                        <p onclick="gotoshop()"><b>Soft Plays</b></p>
+                        <p onclick="gotoshop()">Soft Toys</p>
+                        <p onclick="gotoshop()"><b>Baby &Pre-School</b></p>
+                        <p onclick="gotoshop()"><b>Pretend Pla</b>y</p>
                     </div>
                 </div>
                 <div class=" more-dropdown">
                     <p>More<span> </span><i class="fa-solid fa-angle-down"></i></p>
                         <div class="morecontent">
-                           <p><a href=""></a>>Donate</p>
-                           <p><a href=""></a>>Recycle</p>
-                           <p><a href=""></a>>About us</p>
-                           <p><a href="piggy bank.html"></a>>Piggy Bank</p>
-                           <p><a href="contactus.html"></a>>Contact Us</p>
-                           <p><a href="shoppingguide.html"></a>>Shopping guide</p>
+                            <a href="donate.html"><p>Donate</p></a>
+                            <a href="recycle.html"><p>Recycle</p></a>
+                            <a href="aboutus.html"><p>About us</p></a>
+                            <a href="piggy bank.html"><p>Piggy Bank</p></a>
+                            <a href="contactus.html"><p>Contact Us</p></a>
+                            <a href="shoppingguide.html"><p>Shopping guide</p></a>
                         </div>
                 </div>
             </div>
@@ -208,22 +75,99 @@ select~div{
     </div>
                                                              <!-- NAVBAR Ends Here   -->
 <div id="sliderdiv">
-        <img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/62396e692116d3b59c938057/webp/home-page-banner-collection-7--2048x2048.png">
+        <img onclick="gotoshop()" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/62396e692116d3b59c938057/webp/home-page-banner-collection-7--2048x2048.png">
 </div>
                                             <!-- DIV for everything below slider section  -->
 
-<div >
+<div>
     <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/622110b6a7f7fcce0e8f10d0/webp/5-2048x2048.png" ></div>
     <div id="grid">
-            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d0307445cbcf864887b/webp/1-480x480.png"></div>
-            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d1323d459bc947c3a8f/webp/2-480x480.png"></div>
-            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d21c225ddbc66016cdd/webp/5-480x480.png"></div>
-            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d3408cd08bc14aead57/webp/4-480x480.png"></div>
-            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d43c225ddbc66017070/webp/6-480x480.png"></div>
-            <div><img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d4f08cd08bc14aeafe5/webp/3-480x480.png"></div>
+            <div><img onclick="gotoshop()" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d0307445cbcf864887b/webp/1-480x480.png"></div>
+            <div><img onclick="gotoshop()"src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d1323d459bc947c3a8f/webp/2-480x480.png"></div>
+            <div><img onclick="gotoshop()"src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d21c225ddbc66016cdd/webp/5-480x480.png"></div>
+            <div><img onclick="gotoshop()"src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d3408cd08bc14aead57/webp/4-480x480.png"></div>
+            <div><img onclick="gotoshop()"src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d43c225ddbc66017070/webp/6-480x480.png"></div>
+            <div><img onclick="gotoshop()"src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc5d4f08cd08bc14aeafe5/webp/3-480x480.png"></div>
     </div>
     <!-- Akash Add here -->
-</div>
+    <div id="HOME">
+        <div id="youtube" class="yt" ><iframe width="1280" height="400" src="https://www.youtube.com/embed/cX0OTmWnUec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<!-- CHOOSE BY AGE --> 
+        <div onclick="gotoshop()" id="container-1" class="banner">
+            
+            <img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/622110cad4d404ceff364aa8/webp/6-2048x2048.png" alt="ChooseBy Age">
+
+    </div>
+
+    <div class="Box-b">
+        <div>
+            <a href="shop.html" target="_blank">
+                <img class="age" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc63e7f87b4d2de56533fd/webp/1-480x480.png" alt="age0-2">
+            </a>
+        </div>
+
+        <div>
+            <a href="shop.html" target="_blank">
+                <img class="age" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc63f9e5694a26b943d4e7/webp/3-480x480.png" alt="age2-5">
+            </a>
+        </div>
+
+        <div>
+            <a href="shop.html" target="_blank">
+                <img class="age" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc640ae5694a26b943d721/webp/2-480x480.png" alt="age5-9">
+            </a>
+        </div>
+
+        <div>
+            <a href="shop.html" target="_blank">
+                <img class="age" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61cc641ae8e51c2d6a7f5d5a/webp/4-480x480.png" alt="age9">
+            </a>
+        </div>
+    </div>           
+        
+<!-- DEALS OF THE WEEKS -->
+            <div id="container-2" class="banner">
+
+                <img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/622110d9a7f7fcce0e8f156f/webp/7-2048x2048.png" alt="Deals OF The Week">
+            </div>
+            
+            <div onclick="gotoshop()" id="container-Dow"></div>
+
+            <div class="pink4"></div>
+
+<!-- BRANDS YOU LOVE -->
+
+            <div id="container-3" class="banner">
+
+                <img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/622110f9e9cb1ace8ddd7a62/webp/8-2048x2048.png" alt="Brands YOU'R LOVING">
+        
+            </div>
+            <div id="b-love">
+                <a  href="shop.html" ;target="_blank"><img class="Box-c" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/5fa67021d7011c59bfe2cf24/webp/fiscer-price-480x480.png" alt=""></a>
+                <a href="shop.html" target="_blank"><img class="Box-c" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/5fde53b5f16a0eca6972eeda/webp/5ea7ea8fa5c0d0000415bc2e-480x480.png" alt=""></a>
+                <a  href="shop.html" target="_blank"><img class="Box-c" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/5fc0d608eb7f4fe795b5e4cd/webp/download-1--480x480.png" alt=""></a> 
+                <a  href="shop.html" target="_blank"><img class="Box-c" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/621e6283c7e937069d5c389f/webp/matchbox-480x480.png" alt=""></a> 
+                <a  href="shop.html" target="_blank"><img class="Box-c" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/5f9856dfc7f6c3ed5518b865/webp/tomy_logo-480x480.png" alt=""></a> 
+                <a href="shop.html" target="_blank"><img class="Box-c" src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/5f83586bb0312e1433e34df5/webp/hotwheels2-480x480.jpg" alt=""></a> 
+            </div>
+        
+
+
+
+
+<!-- NEW ARRIVALS START HERE -->
+            <div id="container-3" class="banner">
+                <img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/62211107a7f7fcce0e8f1b24/webp/9-2048x2048.png" alt="New Arivals">
+            </div>
+
+            <div onclick="gotoshop()" id="container-New"></div>
+
+          
+
+
+
+<!-- New ARRIVals Ends HERE -->
+
 
 <!-- FOOTER -->
 
@@ -232,7 +176,7 @@ select~div{
     <!-- SIGNUP LOGO -->
     <div  class="pink"></div>
     <div id="container-6" class="Home-signup">
-        <a href="">
+        <a href="signup.html">
             <img src="https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61ccb7fb806c4bb52f6d8f03/webp/deals-of-the-week-2--2048x2048.png" alt="Home-signup">
         </a>
     </div>
@@ -288,11 +232,11 @@ select~div{
                     
                   <div class="small">
                       <a href="" target=""><ol>  <i class="fa fa-angle-double-right fa-2xs"></i>Terms of Sale</ol></a>
-                      <a href=""  target=""><ol> <i class="fa fa-angle-double-right fa-2xs"></i>Buyback & Sell Policy</ol></a>
+                      <a href="Buyback&sell.html"  target=""><ol> <i class="fa fa-angle-double-right fa-2xs"></i>Buyback & Sell Policy</ol></a>
                       </a><a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Returns, Cancellation & Refunds Policy</ol></a>
                       <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Payment Policy</ol></a>
                       <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Shipping Policy</ol></a>
-                      <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Terms of Use</ol></a>
+                      <a href="terms.html" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Terms of Use</ol></a>
                       <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Privacy Policy</ol></a>
                   </div>
             
@@ -306,7 +250,7 @@ select~div{
             
                     <div class="small">
                         <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>About Us</ol></a>
-                      <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Blog</ol></a>
+                      <a href="contactus.html" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Contact us</ol></a>
                       <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Blog</ol></a>
                     </div>
                     
@@ -318,7 +262,7 @@ select~div{
                     <p class="pp"> ACCOUNT</p>
                     </div>
                     <div class="small">
-                        <a href="" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Wishlist</ol></a>
+                        <a href="test.html" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Wishlist</ol></a>
                       <a href="contactus.html" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Contact us</ol></a>
                       <a href="piggy bank.html" target=""><ol><i class="fa fa-angle-double-right fa-2xs"></i>Piggy Bank</ol></a>
                       
@@ -353,7 +297,271 @@ select~div{
 </body>
 </html>
 <script>
-    function gotow(){
-        window.location.href="hello.html"
+    var cartData = JSON.parse(localStorage.getItem("cart"))||[];
+  console.log(cartData);
+  // wish
+  var NewArriv = JSON.parse(localStorage.getItem("wish")) || [];  //wish
+  console.log(NewArriv) ;
+//   Calculation---------------------------------------------------------------------------------->
+var total = cartData.reduce(function (sum, elem, index, arr) {
+    return sum + Number(elem.price2);
+  }, 0);
+  var length = cartData.length;
+  console.log(length);
+  var length2 =NewArriv.length
+  console.log(total);
+//  Display Calculation---------------------------------------------------------------------------------->
+  var cartcoutup= document.querySelector(".cartcoutup").innerText = ` ${length}`
+  var cartcoutup= document.querySelector(".wishcoup").innerText = ` ${length2}`
+//   var totaldis = document.querySelector(".priceshow").innerText = ` ${total}`;
+//   var totaldis2 = document.querySelector(".priceshow2").innerText = ` ${total}`;
+
+
+
+
+    function gotohome(){
+        window.location.href="index.html"
     }
+    function gotoshop(){
+        window.location.href="shop.html"
+    }
+    function gotoshop2(){
+            select=document.querySelector("select").value
+            if(select=="Shop"){
+                window.location.href="shop.html"
+            }
+            else if(select=="Sell"){
+                window.location.href="sell.html"
+            }
+        }
+    // function gotodonate(){
+    //     window.location.href="donate.html"
+    // }
+    // function gotorecycle(){
+    //     window.location.href="recycle.html"
+    // }
+    // function gotopiggy(){
+    //     window.location.href="piggy bank.html"
+    // }
+    // function gotocontact(){
+    //     window.location.href="contactus.html"
+    // }
+    // function gotoshopping(){
+    //     window.location.href="shoppingguide.html"
+    // }
+    // function gotoaboutus(){
+    //     windows.location.href="aboutus.html"
+    // }
+
+
+
+
+    
+    var NewArriv = JSON.parse(localStorage.getItem("wish")) || [];  //wish
+    
+    var DealsOfWeeks =[
+        {    id:1,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/621d082c98c5cb4243d78072/webp/z01027-480x480.jpeg",
+            name:"Zyper Machinex Robo",
+            price:"₹399",
+            strickoff:"₹499",
+            price2:399,
+
+        },
+        {   id:2,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/620415884b9f9b18a2ce977d/webp/mechanix-racing-cars_1-480x480.jpg",
+            name:"Machinex Racing Car",
+            price:"₹299",
+            strickoff:"₹699",
+            price2:299,
+
+        },
+        {   id:3,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/62040ab420ac68ee3f3b0fe9/webp/mechanix-blix-amusement-park-series_1-480x480.jpg",
+            name:"Bliks Amusment Park",
+            price:"₹499",
+            strickoff:"₹799",
+            price2:499,
+
+        },
+        {   id:4,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/6204170f6293bd18345b0ee8/webp/mechanix-safari_1-480x480.jpg",
+            name:"Machinex Safari Car",
+            price:"₹599",
+            strickoff:"₹899",
+            price2:599,
+
+        }];
+   
+        DealsOfWeeks.map(function(ele){
+            var box =document.createElement("div");
+            box.setAttribute("class","box-dow","trans")
+
+            var img = document.createElement("img")
+                img.src=ele.imgUrl;
+                img.addEventListener("click",function(){
+                     switchs()
+                })
+                 
+                
+            var name = document.createElement("h3")
+                name.innerText= ele.name ;
+                name.setAttribute("class","dow-name")
+            
+            var pricedow =document.createElement("div");
+               pricedow.setAttribute("class","price-dow")
+
+            var price = document.createElement("h4")
+                price.innerText=ele.price
+
+            var strickedoff = document.createElement("h5")
+                strickedoff.innerText=ele.strickoff;
+                strickedoff.setAttribute("class","Tcut")
+
+            var btndiv =document.createElement("div")
+                btndiv.setAttribute("id","btndow")
+
+
+            var btn = document.createElement("button")
+                btn.innerText="🛒"
+                btn.setAttribute("class","btn-cw","trans")
+                btn.addEventListener("click",function (){
+                    addTocart(ele)
+                });
+            
+            var btn2 = document.createElement("button")
+            btn2.setAttribute("class","btn-cw","trans")
+              btn2.innerText="💛"
+              btn2.addEventListener("click",function (){
+                    addToWishlist(ele)
+                });
+             
+              
+              btndiv.append(btn,btn2)
+              pricedow.append(price,strickedoff)
+             box.append(img,name,pricedow,btndiv)
+            document.querySelector("#container-Dow").append(box)
+        })
+
+
+        
+
+        function switchs(){
+            window.location.href=""
+        }
+ 
+
+        // new arivals
+
+        var NewArrivals =[
+        {    id:1,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61eaf8d54f9734fc82eb097b/webp/nerf-nanofire-blaster-480x480.jpg",
+            name:"Htberx Point Gun",
+            price:"₹399",
+            strickoff:"₹499",
+            price2:399,
+            cart: "<i class= fa-solid fa-cart-arrow-down fa-3x></i>",
+
+        },
+        {   id:4,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/6204170f6293bd18345b0ee8/webp/mechanix-safari_1-480x480.jpg",
+            name:"Machinex Safari Car",
+            price:"₹599",
+            strickoff:"₹899",
+            price2:599,
+
+        },
+
+        {   id:2,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/61b6332cf254bb0872b90382/webp/2-480x480.png",
+            name:"Disney Princess Belle",
+            price:"₹299",
+            strickoff:"₹699",
+            price2:229,
+
+        },
+        {   id:3,
+            imgUrl:"https://d2pyicwmjx3wii.cloudfront.net/s/5f447e14285691dcc9bfcdf2/62040ab420ac68ee3f3b0fe9/webp/mechanix-blix-amusement-park-series_1-480x480.jpg",
+            name:"Bliks Amusment Park",
+            price:"₹499",
+            strickoff:"₹799",
+            price2:499,
+            off:"10%",
+
+        },];
+   
+        NewArrivals.map(function(ele){
+            var box =document.createElement("div");
+            box.setAttribute("class","box-dow","trans")
+
+            
+                 
+            var img = document.createElement("img")
+                 img.setAttribute("id","imagediv")
+                img.src=ele.imgUrl;
+                img.addEventListener("click",function(){
+                     switchs()
+                })
+        
+                
+            var name = document.createElement("h3")
+                name.innerText= ele.name ;
+                name.setAttribute("class","dow-name")
+            
+            var pricedow =document.createElement("div");
+               pricedow.setAttribute("class","price-dow")
+            var price = document.createElement("h4")
+                price.setAttribute("id","bigprice")
+                price.innerText=ele.price
+
+            var strickedoff = document.createElement("h5")
+                strickedoff.innerText=ele.strickoff;
+                strickedoff.setAttribute("class","Tcut")
+
+            var btndiv =document.createElement("div")
+                btndiv.setAttribute("id","btndow")
+
+
+            var btn = document.createElement("button")
+                btn.innerText="🛒"
+                btn.setAttribute("class","btn-cw","trans")
+                btn.addEventListener("click",function(){
+                    addTocart(ele)
+                });
+            
+            var btn2 = document.createElement("button")
+            btn2.setAttribute("class","btn-cw","trans")
+              btn2.innerText="💛"
+              btn2.addEventListener("click",function(){
+                    addToWishlist(ele)
+                });
+              
+              btndiv.append(btn,btn2)
+              pricedow.append(price,strickedoff)
+             box.append(img,name,pricedow,btndiv)
+            document.querySelector("#container-New").append(box)
+        })
+
+
+        function addTocart(ele){
+            var dealsweek = JSON.parse(localStorage.getItem("cart")) || []; //cart
+            console.log(ele)
+            dealsweek.push(ele)
+            localStorage.setItem("cart",JSON.stringify(dealsweek))
+            window.location.reload()
+
+        }
+
+        function addToWishlist(ele){
+            console.log(ele)
+            NewArriv.push(ele)
+            localStorage.setItem("wish",JSON.stringify(NewArriv))
+            window.location.reload()
+        }
+
+        function switchs(){
+            window.location.href=""
+        }
+        
+      
 </script>
